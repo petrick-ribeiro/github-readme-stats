@@ -306,6 +306,7 @@ Here is a list of all available locales:
 | `az` | Azerbaijani |
 | `bn` | Bengali |
 | `my` | Burmese |
+| `ca` | Catalan |
 | `cn` | Chinese |
 | `zh-tw` | Chinese (Taiwan) |
 | `cs` | Czech |
@@ -314,12 +315,12 @@ Here is a list of all available locales:
 | `fi` | Finnish |
 | `fr` | French |
 | `de` | German |
-| `el` | Greek |
 
 </td><td>
 
 | Code | Locale |
 | --- | --- |
+| `el` | Greek |
 | `hi` | Hindi |
 | `hu` | Hungarian |
 | `id` | Indonesian |
@@ -332,12 +333,12 @@ Here is a list of all available locales:
 | `fa` | Persian (Farsi) |
 | `pl` | Polish |
 | `pt-br` | Portuguese (Brazil) |
-| `pt-pt` | Portuguese (Portugal) |
 
 </td><td>
 
 | Code | Locale |
 | --- | --- |
+| `pt-pt` | Portuguese (Portugal) |
 | `ro` | Romanian |
 | `ru` | Russian |
 | `sr` | Serbian (Cyrillic) |
@@ -375,7 +376,7 @@ If we don't support your language, please consider contributing! You can find mo
 | `ring_color` | Color of the rank circle. | string (hex color) | `2f80ed` |
 | `number_format` | Switches between two available formats for displaying the card values `short` (i.e. `6.6k`) and `long` (i.e. `6626`). | enum | `short` |
 | `show` | Shows [additional items](#showing-additional-individual-stats) on stats card (i.e. `reviews`, `discussions_started`, `discussions_answered`, `prs_merged` or `prs_merged_percentage`). | string (comma-separated values) | `null` |
-| `commits_year` | Filters and counts only commits made in the specified year | integer _(YYYY)_ | `<current year> (one year to date)`.
+| `commits_year` | Filters and counts only commits made in the specified year. | integer _(YYYY)_ | `<current year> (one year to date)` |
 
 > [!NOTE]\
 > When hide\_rank=`true`, the minimum card width is 270 px + the title length and padding.
@@ -787,7 +788,6 @@ Selecting the right scopes for your token is important in case you want to displ
 
 ### Classic token
 
-Steps:
   - Go to [Account -> Settings -> Developer Settings -> Personal access tokens -> Tokens (classic)](https://github.com/settings/tokens).
   - Click on `Generate new token -> Generate new token (classic)`.
   - Scopes to select:
@@ -800,7 +800,6 @@ Steps:
 > [!WARNING]\
 > This limits the number of issues to the number of issues on your repositories only and only takes public commits into account.
 
-Steps:
   - Go to [Account -> Settings -> Developer Settings -> Personal access tokens -> Fine-grained tokens](https://github.com/settings/tokens).
   - Click on `Generate new token -> Generate new token`.
   - Select an expiration date
